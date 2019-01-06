@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export default class Product extends Component {
   render() {
-    const {id, title, img, price, inCart} = this.props.product;
+    const {id, title, img, price, inCart,company} = this.props.product;
     return (
       <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
         <div className="card">
@@ -20,7 +20,7 @@ export default class Product extends Component {
                 value.addToCart(id);
                 value.openModal(id);
               }}>
-            {inCart?(<p className="text-capitalize mb-0" disabled>in cart</p>): (<i className="fas fa-cart-plus" />)}
+            {inCart?(<p className="text-capitalize mb-0" disabled>v košarici</p>): (<i className="fas fa-cart-plus" />)}
             </button>
           </div>
           )}
@@ -53,13 +53,13 @@ Product.propTypes = {
 const ProductWrapper = styled.div`
 .card{
   border-color: transparent;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
   background: var(--mainCard);
 }
 .card-footer{
   background: transparent;
   border-top: transparent;
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 &:hover{
   .card{
@@ -75,7 +75,7 @@ const ProductWrapper = styled.div`
   overflow: hidden;
 }
 .card-img-top{
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 .img-container: hover .card-img-top{
   transform: scale(1.2);
@@ -91,7 +91,7 @@ const ProductWrapper = styled.div`
   font-size: 1.4rem;
   border-radius: 0.5rem 0 0 0;
   transform: translate(100%,100%);
-  transition: all 1s linear;
+  transition: all 0.5s linear;
 }
 .img-container:hover .cart-btn{
   transform: translate(0,0);

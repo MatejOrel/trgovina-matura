@@ -8,7 +8,7 @@ export default class Details extends Component {
     return (
       <ProductConsumer>
         {(value)=>{
-          const {id,company,img,info,price,title,inCart} = value.detailProduct;
+          const {id,company,img,info,info2,info3,price,title,inCart} = value.detailProduct;
           return(
             <div className="container py-5">
               <div className="row">
@@ -23,22 +23,24 @@ export default class Details extends Component {
               <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
               <h3>model : {title}</h3>
               <h4 className="text-title text-uppercase text-muted mt-3 mb-2">
-              made by : <span className="text-uppercase">
+              proizvajalec : <span className="text-uppercase">
                 {company}</span>
               </h4>
               <h4 className="text-blue">
               <strong>
-                price : {price}<span>€</span>
+                cena : {price}<span>€</span>
               </strong>
               </h4>
               <p className="text-capitalize font-weight-bold mt-3 mb-0">
-              some info about produt:
+              informacije o izdelku:
               </p>
               <p className="text-muted lead">{info}</p>
+              <p className="text-muted lead">{info2}</p>
+              <p className="text-muted lead">{info3}</p>
 
               <div>
                 <Link to="/">
-                  <ButtonContainer>back to products</ButtonContainer>
+                  <ButtonContainer>nazaj na izdelke</ButtonContainer>
                 </Link>
                 <ButtonContainer 
                   cart
@@ -47,7 +49,7 @@ export default class Details extends Component {
                   value.addToCart(id);
                   value.openModal(id);
                 }}>
-                  {inCart?"in Cart": "add to cart"}
+                  {inCart?"v košarici": "dodaj v košarico"}
                 </ButtonContainer>
               </div>
               </div>

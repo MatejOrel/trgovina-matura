@@ -5,22 +5,22 @@ return (
     <div className="container-fluid text-center d-none d-lg-block">
         <div className="row">
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">products</p>
+                <h6 className="text-uppercase">slika</h6>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">name od product</p>
+                <h6 className="text-uppercase">izdelek</h6>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">price</p>
+                <h6 className="text-uppercase">cena</h6>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">quantity</p>
+                <h6 className="text-uppercase">število</h6>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">remove</p>
+                <h6 className="text-uppercase">odstrani</h6>
             </div>
             <div className="col-10 mx-auto col-lg-2">
-                <p className="text-uppercase">total</p>
+                <h6 className="text-uppercase">skupaj</h6>
             </div>
         </div>
     </div>

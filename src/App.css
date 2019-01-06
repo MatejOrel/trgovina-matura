@@ -20,6 +20,12 @@
   text-transform: uppercase;
 }
 
+.text-totals{
+  font-family: "Concert One", cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
 .text-blue{
   color: var(--mainBlue);
 }
